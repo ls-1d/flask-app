@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+<!--  -->
+{% block body %}
+
+<h1>Registrants</h1>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Sport</th>
+    </thead>
+    {% for test in tests %}
+    <tr>
+        {{test}}
+    </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}

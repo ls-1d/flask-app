@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+<!--  -->
+{% block body %}
+
+<style>
+    tr {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+    }
+</style>
+
+<h1>Registrants</h1>
+
+<table>
+    <th>Name</th>
+    <th>Sport</th>
+    <th>De/Register</th>
+    {% for items in registrants %}
+    <tr>
+        <td>{{ items[1] }}</td>
+        <td>{{ items[2] }}</td>
+        <td>
+            <a href="/delete/{{ items[0]}}"> Deregister </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
